@@ -1,14 +1,18 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 <html>
 
 <head>
   <title>My First App</title>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}"
 </head>
 
 <body>
 
   <h2>The Current Working Directory extracted from Django Dynamic Variable Allocation:  </h2>
   {{insert_here}}
+  <p>The Image of Eminem:</p>
+  <img src="{% static 'images/rap_god.png' %}">
 
 </body>
 </html>
