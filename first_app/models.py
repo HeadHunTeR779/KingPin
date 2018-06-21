@@ -10,7 +10,7 @@ class Topic(models.Model):
 
 
 class Webpage(models.Model):
-    topic = models.ForeignKey(Topic)
+    topic = models.ForeignKey(Topic, on_delete=models.CASCADE)
     name = models.CharField(max_length = 264, unique = True)
     url = models.URLField(unique = True)
 
@@ -19,8 +19,8 @@ class Webpage(models.Model):
 
 
 class AccessRecord(models.Model):
-    name = models.ForeignKey(Webpage)
-    date = models.DateField(unique=True)
+    name = models.ForeignKey(Webpage, on_delete=models.CASCADE)
+    date = models.DateField(unique=True)    #note its a Datefield to print as a str explicitly use str()
 
 
     def __str__(self):
