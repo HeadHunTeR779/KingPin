@@ -1,5 +1,5 @@
 from django.contrib import admin
-from first_app.models import Topic, Webpage, AccessRecord
+from .models import Topic, Webpage, AccessRecord #instead of .models you may use first_app.models
 
 # Register your models here.
 
