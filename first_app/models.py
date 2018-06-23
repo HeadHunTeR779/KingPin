@@ -24,4 +24,4 @@ class AccessRecord(models.Model):
 
 
     def __str__(self):
-        return str(self.data)   #because its a date-type object we explicitly make it a str
+        return str(self.date)   #because its a date-type object we explicitly make it a str
